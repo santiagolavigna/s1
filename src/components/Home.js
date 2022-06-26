@@ -10,7 +10,7 @@ export const Home = () => {
   })
 
   return (
-    <div>
+    <div className='Home'>
          <div className="page">
             <div className="container-Home">
               <h1 className="">Hi, I am Santiago Lavigna Jara</h1>
