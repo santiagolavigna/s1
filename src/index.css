@@ -35,8 +35,8 @@ body{
   background: #ffff;
   transition: 300ms;
 }
-.navbar-nav > a:hover::after{
-  width: 100%;
+.navbar-nav > a:hover::after{  
+  width:100%;
 }
 .active{
   text-decoration:underline white !important;
@@ -59,8 +59,23 @@ body{
 }
 @media only screen and (max-width: 991px) {
   .navbar-toggler{
-    padding-left: 90% !important;
+    padding-left: 85% !important;
   }
+  .navbar-nav > a:hover::after{  
+    width: min-content !important;
+  }
+  /*Componente Home mobile*/
+  .container-Home{
+    text-align: center;
+  }
+  .container-Home h1 {
+    font-size: 50px !important;
+    margin-bottom: 20px !important;
+  }
+  .container-Home p {
+    font-size: 30px !important;
+  }
+
 }
 /*Pages*/
 
@@ -72,7 +87,6 @@ margin-top: 10%;
 
 /*Componente Home*/
 .container-Home{
-  /*buscar la fuente de la pagina vieja y ver como opacar el fondo mas oscuro*/
   text-align: center;
 }
 .container-Home h1 {
