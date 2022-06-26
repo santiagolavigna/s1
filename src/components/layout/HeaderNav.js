@@ -10,7 +10,7 @@ export const HeaderNav = () => {
 
   useEffect(() => {
     if(process.env.NODE_ENV === 'production'){
-      setBaseUrl('https://santiagolavigna.github.io/s1/');
+      setBaseUrl(process.env.REACT_APP_URL_PROD);
     }
   },[]);
 
