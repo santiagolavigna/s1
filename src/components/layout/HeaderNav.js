@@ -13,8 +13,12 @@ export const HeaderNav = () => {
       setBaseUrl(process.env.REACT_APP_URL_PROD);
     }
   },[]);
+  
+  const [active, setActive] = window.location.hash === "" ? useState('home') : useState(getHash(window.location.hash));
 
-  const [active, setActive] = useState('default');
+  function getHash(hash) {
+    return (hash.replace('#/',''))
+  }
 
   return (
           <Navbar collapseOnSelect expand="lg" bg="none" variant='dark'>
@@ -25,10 +29,10 @@ export const HeaderNav = () => {
                   activeKey={active}
                   onSelect={(selectedKey) => setActive(selectedKey)}
                  >
-                    <Nav.Link eventKey="default" href={baseUrl + '#/home'}>Home</Nav.Link>
-                    <Nav.Link eventKey="link-1" href={baseUrl + '#/about'}>About</Nav.Link>
-                    <Nav.Link eventKey="link-2" href={baseUrl + '#/skills'}>Skills</Nav.Link>
-                    <Nav.Link eventKey="link-3" href={baseUrl + '#/contact'}>Contact</Nav.Link>
+                    <Nav.Link eventKey="home" href={baseUrl + '#/home'}>Home</Nav.Link>
+                    <Nav.Link eventKey="about" href={baseUrl + '#/about'}>About</Nav.Link>
+                    <Nav.Link eventKey="skills" href={baseUrl + '#/skills'}>Skills</Nav.Link>
+                    <Nav.Link eventKey="contact" href={baseUrl + '#/contact'}>Contact</Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
            </Navbar>

@@ -13,8 +13,8 @@ export const Home = () => {
     <div className='Home'>
          <div className="page">
             <div className="container-Home">
-              <h1 className="">Hi, I am Santiago Lavigna Jara</h1>
-              <p className="">
+              <h1 className="main-font-family">Hi, I am Santiago Lavigna Jara</h1>
+              <p className="p">
                 <span>
                   {text}
                 </span>
