@@ -88,6 +88,11 @@ body{
     font-size: 30px !important;
   }
 
+   /*Componente About mobile*/
+   .container-about p{
+    font-size: 25px;
+  }
+
 }
 /*Pages*/
 
@@ -120,4 +125,8 @@ margin-top: 10%;
   border-radius: 50%;
   display: block;
   margin: 0px auto;
+}
+.container-about p{
+  font-family: 'Courier New', Courier, monospace !important;
+  font-size: 35px;
 }
